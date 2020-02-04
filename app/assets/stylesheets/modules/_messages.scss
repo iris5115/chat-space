@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
 }
-
 .wrapper {
   height: 100vh;
   width: 100vw;
@@ -82,7 +81,7 @@
           padding-top: 15px;
           &__member {
             margin-left: 5px;
-         }
+          }
         }
       }
       &__right-box {
@@ -102,6 +101,29 @@
     .messages {
       height: calc(100% - 190px);
       background-color: #fafafa;
+      .message {
+        padding-left: 40px;
+        &__lists {
+          padding-top: 35px;
+          display: flex;
+          list-style: none;
+          &__user-name {
+            color: #333333;
+            font-size: 16px;
+            padding-right: 10px;
+          }
+          &__daytime {
+            color: #999999;
+            font-size: 12px;
+          }
+        }
+        &__text {
+          padding-top: 12px;
+          margin-bottom: 46px;
+          color: #434A54;
+          font-size: 14px;
+        }
+      }
     }
     .form {
       height: 90px;
