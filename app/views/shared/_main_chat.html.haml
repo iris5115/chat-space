@@ -1,4 +1,14 @@
 .main-chat
-  .main-chat__main-header
-  .main-chat__messages
-  .main-chat__form
+  .main-header
+    .main-header__left-box
+      %p.main-header__left-box__group-name
+        test
+      %ul.main-header__left-box__member-list
+        Member:
+        %li.main-header__left-box__member-list__member
+          masa
+    .main-header__right-box
+      =link_to "#", class: "main-header__right-box__edit-btn" do
+        Edit
+  .messages
+  .form
