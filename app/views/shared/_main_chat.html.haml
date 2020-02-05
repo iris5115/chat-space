@@ -34,3 +34,10 @@
       %p.message__text
         こんばんは！
   .form
+    %form.new-message
+      .input-box
+        %input.input-box__text{:placeholder => "type a message", :type => "text"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
