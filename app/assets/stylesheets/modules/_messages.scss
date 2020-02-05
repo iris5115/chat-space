@@ -1,8 +1,6 @@
 * {
   box-sizing: border-box;
-}
 .wrapper {
-  height: 100vh;
   width: 100vw;
   display: flex;
   .chat-side {
@@ -100,7 +98,7 @@
       }
     }
     .messages {
-      height: calc(100% - 190px);
+      height: calc(100vh - 190px);
       background-color: #fafafa;
       .message {
         padding-left: 40px;
@@ -129,9 +127,9 @@
     .form {
       height: 90px;
       background-color: #d2d2d2;
-      padding: 20px 40px;
       .new-message {
         display: flex;
+        padding: 20px 40px;
         .input-box {
           width: 100%;
           position: relative;
@@ -164,5 +162,5 @@
     }
   }
 }
-
+}
 
