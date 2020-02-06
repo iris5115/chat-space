@@ -128,43 +128,45 @@
         }
       }
     }
-    .form {
+    .forms {
       height: 90px;
       background-color: #d2d2d2;
-      .new-message {
-        display: flex;
-        padding: 20px 40px;
-        .input-box {
-          width: 100%;
-          position: relative;
-          &__text {
+      .form {
+        .new_message {
+          display: flex;
+          padding: 20px 40px;
+          &__message {
             padding: 0 0 0 10px;
             height: 50px;
             width: 100%;
           }
-          &__image {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            cursor: pointer;
-            &__file {
+          &__input-box {
+            position: relative;
+            &__image {
+              position: absolute;
+              top: 20px;
+              right: 20px;
+              cursor: pointer;
+            }
+            .hidden {
               display: none;
             }
           }
-        }
-        .submit-btn {
-          width: 100px;
-          height: 50px;
-          margin-left: 15px;
-          padding: 0 20px;
-          font-size: 15px;
-          color: #fafafa;
-          background-color: #38aef0;
-          cursor: pointer;
+          &__submit {
+            width: 100px;
+            height: 50px;
+            margin-left: 15px;
+            padding: 0 20px;
+            font-size: 15px;
+            color: #fafafa;
+            background-color: #38aef0;
+            cursor: pointer;
+          }
         }
       }
     }
   }
 }
 }
+
 

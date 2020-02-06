@@ -11,33 +11,13 @@
       =link_to "#", class: "main-header__right-box__edit-btn" do
         Edit
   .messages
-    .message
-      %ul.message__lists
-        %li.message__lists__user-name
-          masa
-        %li.message__lists__daytime
-          2019/02/03(Wed) 20:00:00
-      %p.message__text
-        おはよう！
-      %ul.message__lists
-        %li.message__lists__user-name
-          masa
-        %li.message__lists__daytime
-          2019/02/03(Wed) 21:00:00
-      %p.message__text
-        こんにちは！
-      %ul.message__lists
-        %li.message__lists__user-name
-          masa
-        %li.message__lists__daytime
-          2019/02/03(Wed) 22:00:00
-      %p.message__text
-        こんばんは！
-  .form
-    %form.new-message
-      .input-box
-        %input.input-box__text{:placeholder => "type a message", :type => "text"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+    = render @messages
+  .forms
+    .form
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'new_message__message', placeholder: 'type a message'
+        .new_message__input-box
+          = f.label :image, class: 'new_message__input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'new_message__submit'
