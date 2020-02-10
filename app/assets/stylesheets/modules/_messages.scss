@@ -104,6 +104,7 @@
     .messages {
       height: calc(100vh - 190px);
       background-color: #fafafa;
+      overflow: scroll;
       .message {
         padding-left: 40px;
         &__lists {
@@ -120,11 +121,13 @@
             font-size: 12px;
           }
         }
-        &__text {
-          padding-top: 12px;
-          margin-bottom: 46px;
+        &__content {
           color: #434A54;
-          font-size: 14px;
+          font-size: 14px;                
+          &__text {
+            padding-top: 12px;
+            margin-bottom: 46px;
+          }
         }
       }
     }
