@@ -69,6 +69,8 @@ $(function(){
       }
     })
     .fail(function() {
+      $('form')[0].reset();
+      $('.new_message__submit').prop('disabled', false);
       alert("メッセージ送信に失敗しました");
     });
   };
@@ -92,6 +94,8 @@ $('#new_message').on('submit', function(e){
     $('.new_message__submit').prop('disabled', false);
   })
   .fail(function() {
+    $('form')[0].reset();
+    $('.new_message__submit').prop('disabled', false);
     alert("メッセージ送信に失敗しました");
 });
 })
